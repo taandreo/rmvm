@@ -27,10 +27,25 @@ resource "azurerm_network_interface" "main" {
   resource_group_name = azurerm_resource_group.example.name
 
   ip_configuration {
+    primary = true
     name                          = "testconfiguration1"
     subnet_id                     = azurerm_subnet.internal.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id = azurerm_public_ip.pubIp.id
+  }
+}
+
+resource "azurerm_network_interface" "main2" {
+  name                = "${var.prefix}-nic2"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+
+  ip_configuration {
+    primary = false
+    name                          = "testconfiguration2"
+    subnet_id                     = azurerm_subnet.internal.id
+    private_ip_address_allocation = "Dynamic"
+    public_ip_address_id = azurerm_public_ip.pubip2.id
   }
 }
 
@@ -41,11 +56,20 @@ resource "azurerm_public_ip" "pubIp" {
   allocation_method = "Dynamic"
 }
 
+resource "azurerm_storage_account" "sta" {
+  name = "sad898s67s8mj"
+  account_replication_type = "LRS"
+  location = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  account_tier = "Standard"
+}
+
 resource "azurerm_virtual_machine" "main" {
   name                  = "${var.prefix}-vm"
   location              = azurerm_resource_group.example.location
   resource_group_name   = azurerm_resource_group.example.name
-  network_interface_ids = [azurerm_network_interface.main.id]
+  network_interface_ids = [azurerm_network_interface.main.id, azurerm_network_interface.main2.id]
+  primary_network_interface_id = azurerm_network_interface.main.id
   vm_size               = "Standard_DS1_v2"
 
   storage_image_reference {
@@ -74,4 +98,20 @@ resource "azurerm_virtual_machine" "main" {
   tags = {
     environment = "sandbox"
   }
+}
+
+resource "azurerm_public_ip" "pubip2" {
+  name                = "asdhfy7672"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  allocation_method   = "Dynamic"
+
+  tags = {
+    environment = "staging"
+  }
+}
+
+output "storage_string" {
+  value = azurerm_storage_account.sta.primary_connection_string
+  sensitive = true
 }

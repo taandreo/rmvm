@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 11 01:05:15 2022
+# Make data base, printed on Tue Aug 16 22:02:39 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ GOPROXY = https://proxy.golang.org,direct
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/tairan/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/taand/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/taand/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/taand/AppData/Local/GitHubDesktop/bin:/home/tairan/.local/bin/:/usr/local/go/bin
+PATH = /home/tairan/.vscode-server/bin/6d9b74a70ca9c7733b29f0456fd8195364076dda/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/taand/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/taand/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/taand/AppData/Local/GitHubDesktop/bin:/home/tairan/.local/bin/:/usr/local/go/bin
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
@@ -59,7 +59,7 @@ GOPATH = /home/tairan/go
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-9247af5c-96a0-4f76-afcc-be52c0a5f9ca.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-f4d02922-4924-4b09-bad6-aca9b6a70a6d.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -75,7 +75,7 @@ WSL_INTEROP = /run/WSL/8_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = 63fad231-2a49-44ff-adc9-c7a06c8ae6f1
+WT_SESSION = 58acf7f6-f59f-491a-bec4-5bfd4e5403b6
 # environment
 GOMODCACHE = /home/tairan/go/pkg/mod
 # environment
@@ -171,9 +171,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2080, inode 390): 13 files, no impossibilities.
+# . (device 2080, inode 390): 14 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -191,7 +191,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:57:25.946892127
+#  Last modified 2022-08-14 23:30:40.973720316
 #  File has been updated.
 #  Successfully updated.
 
@@ -223,12 +223,12 @@ list:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 154 B / avg = 7 B
-# current buf: size = 8162 B / used = 154 B / count = 20 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 160 B / avg = 7 B
+# current buf: size = 8162 B / used = 160 B / count = 21 / avg = 7 B
 
-# strcache performance: lookups = 26 / hit rate = 23%
+# strcache performance: lookups = 27 / hit rate = 22%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=1/26=4%
-# Finished Make data base on Thu Aug 11 01:05:15 2022
+# Load=21/8192=0%, Rehash=0, Collisions=1/27=4%
+# Finished Make data base on Tue Aug 16 22:02:39 2022
 
  
